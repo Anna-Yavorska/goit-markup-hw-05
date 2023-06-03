@@ -54,7 +54,6 @@ img {
   border-bottom: 1px solid var(--card-border-color);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-
 }
 .header-container {
   display: flex;
@@ -97,10 +96,9 @@ img {
   display: flex;
   align-items: center;
   gap: 40px;
- 
 }
-.current{
- position: relative;
+.current {
+  position: relative;
 }
 .title {
   display: inline-block;
@@ -117,16 +115,16 @@ img {
 .link.current {
   color: var(--secondary-accent-color);
 }
-.current::after{
+.current::after {
   content: "";
-position: absolute;
-left: 0;
-bottom: 0;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
 
-width: 100%;
-height: 4px;
-background-color: var(--secondary-accent-color);
-border-radius: 2px;
+  width: 100%;
+  height: 4px;
+  background-color: var(--secondary-accent-color);
+  border-radius: 2px;
 }
 .address {
   margin-left: auto;
@@ -197,13 +195,11 @@ border-radius: 2px;
   cursor: pointer;
   border: none;
   border-radius: 4px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-   background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main-button:hover,
 .main-button:focus {
   background-color: var(--secondary-accent-color);
-  color: var(--accent-color);
 }
 /* Our strengths */
 .strengths-container {
@@ -301,7 +297,7 @@ border-radius: 2px;
   margin-top: 8px;
   justify-content: center;
 }
-.team-cos{
+.team-cos {
   width: 40px;
   height: 40px;
 }
@@ -350,7 +346,7 @@ border-radius: 2px;
   justify-content: center;
   color: #8e8f99;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-icon {
   fill: currentColor;
@@ -409,7 +405,7 @@ border-radius: 2px;
   display: flex;
   gap: 16px;
 }
-.icon-example{
+.icon-example {
   width: 40px;
   height: 40px;
 }
@@ -457,11 +453,10 @@ border-radius: 2px;
   border: 1px solid var(--card-border-color);
   border-radius: 4px;
   padding: 12px 24px;
-  
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-button:hover,
 .menu-button:focus {
@@ -481,39 +476,40 @@ box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .work-example {
   width: calc((100% - 48px) / 3);
 }
-.work-example:hover .example-cover-text{
+.work-example:hover .example-cover-text {
   transform: translateY(0);
 }
-.example-cover-wrap{
-position: relative;
-overflow: hidden;
-z-index: -1;
-}
+
 .example-item {
   display: block;
   box-sizing: border-box;
   width: 360px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.example-cover-text{
+.example-cover-wrap {
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+}
+.example-cover-text {
   position: absolute;
   top: 0;
   font-size: 16px;
-line-height: 1.5;
-letter-spacing: 0.02em;
-color: var(--secondary-background);
-background-color: var(--logo-button-color);
-padding-top: 40px;
-padding-right: 32px;
-padding-left: 32px;
-height: 100%;
-transform: translateY(100%);
-transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--secondary-background);
+  background-color: var(--logo-button-color);
+  padding: 40px 32px;
+  height: 100%;
+  width: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .example-item:hover,
 .example-item:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  transform: translateY(0%);
 }
 .example-deskription {
   padding: 32px 16px;
@@ -521,59 +517,65 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-top: none;
 }
 /* Backdrop */
-.backdrop{
+.backdrop {
   position: fixed;
   width: 100%;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
   top: 0;
-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.is-hidden{
-  visibility: none;
+.is-hidden {
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
 
-.modal{
+.modal {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   width: 408px;
   min-height: 584px;
-  background-color:  #FCFCFC;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 4px;
-padding: 24px;
+  background-color: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 24px;
 }
-.modal-close{
+.modal-close {
   width: 24px;
   height: 24px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: var(--card-border-color);
+  padding: 0;
   margin-left: auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  top: 24px;
+  right: 24px;
   cursor: pointer;
   color: var(--secondary-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.backdrop.is-hidden .modal{
-  transform: translate(-50%, -50%) scale(0); 
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
 }
-.modal-close-icon{
+.modal-close-icon {
   fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close:hover,
 .modal-close:focus {
   background-color: var(--secondary-accent-color);
   color: var(--accent-color);
+  border: none;
 }
